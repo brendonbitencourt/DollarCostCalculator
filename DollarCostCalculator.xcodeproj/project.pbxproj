@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		DA7F1D6A263361D2000022B9 /* SearchViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7F1D69263361D2000022B9 /* SearchViewCell.swift */; };
+		DA7F1D73263363FF000022B9 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7F1D72263363FF000022B9 /* APIService.swift */; };
+		DA7F1D7926336568000022B9 /* SearchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7F1D7826336568000022B9 /* SearchResults.swift */; };
 		DAC061CE263356FD00416743 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC061CD263356FD00416743 /* AppDelegate.swift */; };
 		DAC061D0263356FD00416743 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC061CF263356FD00416743 /* SceneDelegate.swift */; };
 		DAC061D2263356FD00416743 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC061D1263356FD00416743 /* SearchTableViewController.swift */; };
@@ -39,6 +41,8 @@
 
 /* Begin PBXFileReference section */
 		DA7F1D69263361D2000022B9 /* SearchViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewCell.swift; sourceTree = "<group>"; };
+		DA7F1D72263363FF000022B9 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		DA7F1D7826336568000022B9 /* SearchResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResults.swift; sourceTree = "<group>"; };
 		DAC061CA263356FD00416743 /* DollarCostCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DollarCostCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAC061CD263356FD00416743 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAC061CF263356FD00416743 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +102,22 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		DA7F1D71263363F2000022B9 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				DA7F1D72263363FF000022B9 /* APIService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		DA7F1D7726336556000022B9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DA7F1D7826336568000022B9 /* SearchResults.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		DAC061C1263356FD00416743 = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +141,8 @@
 		DAC061CC263356FD00416743 /* DollarCostCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				DA7F1D7726336556000022B9 /* Model */,
+				DA7F1D71263363F2000022B9 /* Service */,
 				DA7F1D68263361BE000022B9 /* Controller */,
 				DA7F1D67263361B7000022B9 /* View */,
 				DAC061CD263356FD00416743 /* AppDelegate.swift */,
@@ -290,8 +312,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA7F1D6A263361D2000022B9 /* SearchViewCell.swift in Sources */,
+				DA7F1D73263363FF000022B9 /* APIService.swift in Sources */,
 				DAC061D2263356FD00416743 /* SearchTableViewController.swift in Sources */,
 				DAC061CE263356FD00416743 /* AppDelegate.swift in Sources */,
+				DA7F1D7926336568000022B9 /* SearchResults.swift in Sources */,
 				DAC061D0263356FD00416743 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
