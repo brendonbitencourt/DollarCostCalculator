@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SearchViewController: UITableViewController {
+class SearchTableViewController: UITableViewController {
     
     private lazy var searchController: UISearchController = {
         let controller = UISearchController(searchResultsController: nil)
@@ -24,14 +24,21 @@ class SearchViewController: UITableViewController {
         setupNavigationBar()
     }
     
-    func setupNavigationBar() {
+    private func setupNavigationBar() {
         navigationItem.searchController = searchController
     }
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
     
-    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cellId", for: indexPath)
+        return cell
+    }
 }
 
-extension SearchViewController: UISearchResultsUpdating, UISearchControllerDelegate {
+extension SearchTableViewController: UISearchResultsUpdating, UISearchControllerDelegate {
     
     func updateSearchResults(for searchController: UISearchController) {
     }
