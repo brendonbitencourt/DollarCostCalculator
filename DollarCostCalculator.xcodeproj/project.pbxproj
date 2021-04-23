@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,8 @@
 		DAC061DA263356FF00416743 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAC061D8263356FF00416743 /* LaunchScreen.storyboard */; };
 		DAC061E5263356FF00416743 /* DollarCostCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC061E4263356FF00416743 /* DollarCostCalculatorTests.swift */; };
 		DAC061F0263356FF00416743 /* DollarCostCalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC061EF263356FF00416743 /* DollarCostCalculatorUITests.swift */; };
+		DAC06202263358D600416743 /* Loaf in Frameworks */ = {isa = PBXBuildFile; productRef = DAC06201263358D600416743 /* Loaf */; };
+		DAC06208263358EC00416743 /* MBProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = DAC06207263358EC00416743 /* MBProgressHUD */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAC06208263358EC00416743 /* MBProgressHUD in Frameworks */,
+				DAC06202263358D600416743 /* Loaf in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,6 +148,10 @@
 			dependencies = (
 			);
 			name = DollarCostCalculator;
+			packageProductDependencies = (
+				DAC06201263358D600416743 /* Loaf */,
+				DAC06207263358EC00416743 /* MBProgressHUD */,
+			);
 			productName = DollarCostCalculator;
 			productReference = DAC061CA263356FD00416743 /* DollarCostCalculator.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +223,10 @@
 				Base,
 			);
 			mainGroup = DAC061C1263356FD00416743;
+			packageReferences = (
+				DAC06200263358D600416743 /* XCRemoteSwiftPackageReference "Loaf" */,
+				DAC06206263358EC00416743 /* XCRemoteSwiftPackageReference "MBProgressHUD" */,
+			);
 			productRefGroup = DAC061CB263356FD00416743 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -593,6 +605,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DAC06200263358D600416743 /* XCRemoteSwiftPackageReference "Loaf" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/schmidyy/Loaf.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.7.0;
+			};
+		};
+		DAC06206263358EC00416743 /* XCRemoteSwiftPackageReference "MBProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jdg/MBProgressHUD";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DAC06201263358D600416743 /* Loaf */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DAC06200263358D600416743 /* XCRemoteSwiftPackageReference "Loaf" */;
+			productName = Loaf;
+		};
+		DAC06207263358EC00416743 /* MBProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DAC06206263358EC00416743 /* XCRemoteSwiftPackageReference "MBProgressHUD" */;
+			productName = MBProgressHUD;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DAC061C2263356FD00416743 /* Project object */;
 }
