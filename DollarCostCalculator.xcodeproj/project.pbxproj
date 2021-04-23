@@ -1,0 +1,598 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DAC061CE263356FD00416743 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC061CD263356FD00416743 /* AppDelegate.swift */; };
+		DAC061D0263356FD00416743 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC061CF263356FD00416743 /* SceneDelegate.swift */; };
+		DAC061D2263356FD00416743 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC061D1263356FD00416743 /* ViewController.swift */; };
+		DAC061D5263356FD00416743 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAC061D3263356FD00416743 /* Main.storyboard */; };
+		DAC061D7263356FF00416743 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAC061D6263356FF00416743 /* Assets.xcassets */; };
+		DAC061DA263356FF00416743 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAC061D8263356FF00416743 /* LaunchScreen.storyboard */; };
+		DAC061E5263356FF00416743 /* DollarCostCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC061E4263356FF00416743 /* DollarCostCalculatorTests.swift */; };
+		DAC061F0263356FF00416743 /* DollarCostCalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC061EF263356FF00416743 /* DollarCostCalculatorUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DAC061E1263356FF00416743 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DAC061C2263356FD00416743 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DAC061C9263356FD00416743;
+			remoteInfo = DollarCostCalculator;
+		};
+		DAC061EC263356FF00416743 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DAC061C2263356FD00416743 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DAC061C9263356FD00416743;
+			remoteInfo = DollarCostCalculator;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DAC061CA263356FD00416743 /* DollarCostCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DollarCostCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAC061CD263356FD00416743 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DAC061CF263356FD00416743 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		DAC061D1263356FD00416743 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DAC061D4263356FD00416743 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DAC061D6263356FF00416743 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DAC061D9263356FF00416743 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DAC061DB263356FF00416743 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAC061E0263356FF00416743 /* DollarCostCalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DollarCostCalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAC061E4263356FF00416743 /* DollarCostCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DollarCostCalculatorTests.swift; sourceTree = "<group>"; };
+		DAC061E6263356FF00416743 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAC061EB263356FF00416743 /* DollarCostCalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DollarCostCalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAC061EF263356FF00416743 /* DollarCostCalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DollarCostCalculatorUITests.swift; sourceTree = "<group>"; };
+		DAC061F1263356FF00416743 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DAC061C7263356FD00416743 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAC061DD263356FF00416743 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAC061E8263356FF00416743 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DAC061C1263356FD00416743 = {
+			isa = PBXGroup;
+			children = (
+				DAC061CC263356FD00416743 /* DollarCostCalculator */,
+				DAC061E3263356FF00416743 /* DollarCostCalculatorTests */,
+				DAC061EE263356FF00416743 /* DollarCostCalculatorUITests */,
+				DAC061CB263356FD00416743 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DAC061CB263356FD00416743 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DAC061CA263356FD00416743 /* DollarCostCalculator.app */,
+				DAC061E0263356FF00416743 /* DollarCostCalculatorTests.xctest */,
+				DAC061EB263356FF00416743 /* DollarCostCalculatorUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DAC061CC263356FD00416743 /* DollarCostCalculator */ = {
+			isa = PBXGroup;
+			children = (
+				DAC061CD263356FD00416743 /* AppDelegate.swift */,
+				DAC061CF263356FD00416743 /* SceneDelegate.swift */,
+				DAC061D1263356FD00416743 /* ViewController.swift */,
+				DAC061D3263356FD00416743 /* Main.storyboard */,
+				DAC061D6263356FF00416743 /* Assets.xcassets */,
+				DAC061D8263356FF00416743 /* LaunchScreen.storyboard */,
+				DAC061DB263356FF00416743 /* Info.plist */,
+			);
+			path = DollarCostCalculator;
+			sourceTree = "<group>";
+		};
+		DAC061E3263356FF00416743 /* DollarCostCalculatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				DAC061E4263356FF00416743 /* DollarCostCalculatorTests.swift */,
+				DAC061E6263356FF00416743 /* Info.plist */,
+			);
+			path = DollarCostCalculatorTests;
+			sourceTree = "<group>";
+		};
+		DAC061EE263356FF00416743 /* DollarCostCalculatorUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DAC061EF263356FF00416743 /* DollarCostCalculatorUITests.swift */,
+				DAC061F1263356FF00416743 /* Info.plist */,
+			);
+			path = DollarCostCalculatorUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DAC061C9263356FD00416743 /* DollarCostCalculator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAC061F4263356FF00416743 /* Build configuration list for PBXNativeTarget "DollarCostCalculator" */;
+			buildPhases = (
+				DAC061C6263356FD00416743 /* Sources */,
+				DAC061C7263356FD00416743 /* Frameworks */,
+				DAC061C8263356FD00416743 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DollarCostCalculator;
+			productName = DollarCostCalculator;
+			productReference = DAC061CA263356FD00416743 /* DollarCostCalculator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DAC061DF263356FF00416743 /* DollarCostCalculatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAC061F7263356FF00416743 /* Build configuration list for PBXNativeTarget "DollarCostCalculatorTests" */;
+			buildPhases = (
+				DAC061DC263356FF00416743 /* Sources */,
+				DAC061DD263356FF00416743 /* Frameworks */,
+				DAC061DE263356FF00416743 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DAC061E2263356FF00416743 /* PBXTargetDependency */,
+			);
+			name = DollarCostCalculatorTests;
+			productName = DollarCostCalculatorTests;
+			productReference = DAC061E0263356FF00416743 /* DollarCostCalculatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DAC061EA263356FF00416743 /* DollarCostCalculatorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAC061FA263356FF00416743 /* Build configuration list for PBXNativeTarget "DollarCostCalculatorUITests" */;
+			buildPhases = (
+				DAC061E7263356FF00416743 /* Sources */,
+				DAC061E8263356FF00416743 /* Frameworks */,
+				DAC061E9263356FF00416743 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DAC061ED263356FF00416743 /* PBXTargetDependency */,
+			);
+			name = DollarCostCalculatorUITests;
+			productName = DollarCostCalculatorUITests;
+			productReference = DAC061EB263356FF00416743 /* DollarCostCalculatorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DAC061C2263356FD00416743 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					DAC061C9263356FD00416743 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					DAC061DF263356FF00416743 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = DAC061C9263356FD00416743;
+					};
+					DAC061EA263356FF00416743 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = DAC061C9263356FD00416743;
+					};
+				};
+			};
+			buildConfigurationList = DAC061C5263356FD00416743 /* Build configuration list for PBXProject "DollarCostCalculator" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DAC061C1263356FD00416743;
+			productRefGroup = DAC061CB263356FD00416743 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DAC061C9263356FD00416743 /* DollarCostCalculator */,
+				DAC061DF263356FF00416743 /* DollarCostCalculatorTests */,
+				DAC061EA263356FF00416743 /* DollarCostCalculatorUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DAC061C8263356FD00416743 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAC061DA263356FF00416743 /* LaunchScreen.storyboard in Resources */,
+				DAC061D7263356FF00416743 /* Assets.xcassets in Resources */,
+				DAC061D5263356FD00416743 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAC061DE263356FF00416743 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAC061E9263356FF00416743 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DAC061C6263356FD00416743 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAC061D2263356FD00416743 /* ViewController.swift in Sources */,
+				DAC061CE263356FD00416743 /* AppDelegate.swift in Sources */,
+				DAC061D0263356FD00416743 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAC061DC263356FF00416743 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAC061E5263356FF00416743 /* DollarCostCalculatorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAC061E7263356FF00416743 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAC061F0263356FF00416743 /* DollarCostCalculatorUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DAC061E2263356FF00416743 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DAC061C9263356FD00416743 /* DollarCostCalculator */;
+			targetProxy = DAC061E1263356FF00416743 /* PBXContainerItemProxy */;
+		};
+		DAC061ED263356FF00416743 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DAC061C9263356FD00416743 /* DollarCostCalculator */;
+			targetProxy = DAC061EC263356FF00416743 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DAC061D3263356FD00416743 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DAC061D4263356FD00416743 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DAC061D8263356FF00416743 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DAC061D9263356FF00416743 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DAC061F2263356FF00416743 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DAC061F3263356FF00416743 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DAC061F5263356FF00416743 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R3CKR2Q8L8;
+				INFOPLIST_FILE = DollarCostCalculator/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.brendonbitencourt.DollarCostCalculator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DAC061F6263356FF00416743 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R3CKR2Q8L8;
+				INFOPLIST_FILE = DollarCostCalculator/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.brendonbitencourt.DollarCostCalculator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DAC061F8263356FF00416743 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R3CKR2Q8L8;
+				INFOPLIST_FILE = DollarCostCalculatorTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.brendonbitencourt.DollarCostCalculatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DollarCostCalculator.app/DollarCostCalculator";
+			};
+			name = Debug;
+		};
+		DAC061F9263356FF00416743 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R3CKR2Q8L8;
+				INFOPLIST_FILE = DollarCostCalculatorTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.brendonbitencourt.DollarCostCalculatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DollarCostCalculator.app/DollarCostCalculator";
+			};
+			name = Release;
+		};
+		DAC061FB263356FF00416743 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R3CKR2Q8L8;
+				INFOPLIST_FILE = DollarCostCalculatorUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.brendonbitencourt.DollarCostCalculatorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DollarCostCalculator;
+			};
+			name = Debug;
+		};
+		DAC061FC263356FF00416743 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R3CKR2Q8L8;
+				INFOPLIST_FILE = DollarCostCalculatorUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.brendonbitencourt.DollarCostCalculatorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DollarCostCalculator;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DAC061C5263356FD00416743 /* Build configuration list for PBXProject "DollarCostCalculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAC061F2263356FF00416743 /* Debug */,
+				DAC061F3263356FF00416743 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DAC061F4263356FF00416743 /* Build configuration list for PBXNativeTarget "DollarCostCalculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAC061F5263356FF00416743 /* Debug */,
+				DAC061F6263356FF00416743 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DAC061F7263356FF00416743 /* Build configuration list for PBXNativeTarget "DollarCostCalculatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAC061F8263356FF00416743 /* Debug */,
+				DAC061F9263356FF00416743 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DAC061FA263356FF00416743 /* Build configuration list for PBXNativeTarget "DollarCostCalculatorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAC061FB263356FF00416743 /* Debug */,
+				DAC061FC263356FF00416743 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DAC061C2263356FD00416743 /* Project object */;
+}
