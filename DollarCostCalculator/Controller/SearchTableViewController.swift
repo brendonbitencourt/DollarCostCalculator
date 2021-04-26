@@ -7,8 +7,9 @@
 
 import UIKit
 import Combine
+import MBProgressHUD
 
-class SearchTableViewController: UITableViewController {
+class SearchTableViewController: UITableViewController, UIAnimatable {
     
     private lazy var searchController: UISearchController = {
         let controller = UISearchController(searchResultsController: nil)
@@ -55,28 +56,33 @@ class SearchTableViewController: UITableViewController {
             }
             .store(in: &subscribers)
         
-        $mode.sink { [unowned self] (mode) in
-            switch mode {
-                case .onboarding:
-                    self.tableView.backgroundView = SearchPlaceholderView()
-                case .search:
-                    self.tableView.backgroundView = nil
+        $mode
+            .sink { [unowned self] (mode) in
+                switch mode {
+                    case .onboarding:
+                        self.tableView.backgroundView = SearchPlaceholderView()
+                    case .search:
+                        self.tableView.backgroundView = nil
+                }
             }
-        }
-        .store(in: &subscribers)
+            .store(in: &subscribers)
     }
     
     private func performSearch(for keywords: String) {
-        apiService.fetchSymbolsPublisher(keywords: keywords).sink { (completion) in
-            switch completion {
-                case .finished: break
-                case .failure(let error):
-                    print(error.localizedDescription)
-            }
-        } receiveValue: { (searchResults) in
-            self.searchResults = searchResults
-            self.tableView.reloadData()
-        }.store(in: &subscribers)
+        if !keywords.isEmpty {
+            self.showLoadingAnimation()
+            apiService.fetchSymbolsPublisher(keywords: keywords).sink { (completion) in
+                self.hideLoadingAnimation()
+                switch completion {
+                    case .finished: break
+                    case .failure(let error):
+                        print(error.localizedDescription)
+                }
+            } receiveValue: { (searchResults) in
+                self.searchResults = searchResults
+                self.tableView.reloadData()
+            }.store(in: &subscribers)
+        }
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

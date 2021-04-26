@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DA1B6F9426374F6D00B027E1 /* SearchPlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1B6F9326374F6D00B027E1 /* SearchPlaceholderView.swift */; };
+		DA1B6F9A2637534300B027E1 /* UIAnimatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1B6F992637534300B027E1 /* UIAnimatable.swift */; };
 		DA7F1D6A263361D2000022B9 /* SearchViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7F1D69263361D2000022B9 /* SearchViewCell.swift */; };
 		DA7F1D73263363FF000022B9 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7F1D72263363FF000022B9 /* APIService.swift */; };
 		DA7F1D7926336568000022B9 /* SearchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7F1D7826336568000022B9 /* SearchResults.swift */; };
@@ -42,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		DA1B6F9326374F6D00B027E1 /* SearchPlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPlaceholderView.swift; sourceTree = "<group>"; };
+		DA1B6F992637534300B027E1 /* UIAnimatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAnimatable.swift; sourceTree = "<group>"; };
 		DA7F1D69263361D2000022B9 /* SearchViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewCell.swift; sourceTree = "<group>"; };
 		DA7F1D72263363FF000022B9 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		DA7F1D7826336568000022B9 /* SearchResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResults.swift; sourceTree = "<group>"; };
@@ -88,6 +90,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA1B6F982637532E00B027E1 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				DA1B6F992637534300B027E1 /* UIAnimatable.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 		DA7F1D67263361B7000022B9 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +154,7 @@
 		DAC061CC263356FD00416743 /* DollarCostCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				DA1B6F982637532E00B027E1 /* Protocol */,
 				DA7F1D7726336556000022B9 /* Model */,
 				DA7F1D71263363F2000022B9 /* Service */,
 				DA7F1D68263361BE000022B9 /* Controller */,
@@ -315,6 +326,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA7F1D6A263361D2000022B9 /* SearchViewCell.swift in Sources */,
+				DA1B6F9A2637534300B027E1 /* UIAnimatable.swift in Sources */,
 				DA7F1D73263363FF000022B9 /* APIService.swift in Sources */,
 				DAC061D2263356FD00416743 /* SearchTableViewController.swift in Sources */,
 				DAC061CE263356FD00416743 /* AppDelegate.swift in Sources */,
