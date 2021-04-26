@@ -16,41 +16,79 @@ class SearchTableViewController: UITableViewController {
         controller.delegate = self
         controller.obscuresBackgroundDuringPresentation = false
         controller.searchBar.placeholder = "Enter a company name or symbol"
-        controller.searchBar.autocapitalizationType = .sentences
+        controller.searchBar.autocapitalizationType = .allCharacters
         return controller
     }()
     
+    private enum Mode {
+        case onboarding
+        case search
+    }
+    
     private let apiService = APIService()
     private var subscribers = Set<AnyCancellable>()
+    private var searchResults: SearchResults?
+    
+    @Published private var mode: Mode = .onboarding
+    @Published private var searchQuery = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
-        performSearch()
+        setupTableView()
+        observeForm()
     }
     
     private func setupNavigationBar() {
         navigationItem.searchController = searchController
     }
     
-    private func performSearch() {
-        apiService.fetchSymbolsPublisher(keywords: "AMZ").sink { (completion) in
+    private func setupTableView() {
+        tableView.tableFooterView = UIView()
+    }
+    
+    private func observeForm() {
+        $searchQuery
+            .debounce(for: .milliseconds(750), scheduler: RunLoop.main)
+            .sink { [unowned self] (searchQuery) in
+                self.performSearch(for: searchQuery)
+            }
+            .store(in: &subscribers)
+        
+        $mode.sink { [unowned self] (mode) in
+            switch mode {
+                case .onboarding:
+                    self.tableView.backgroundView = SearchPlaceholderView()
+                case .search:
+                    self.tableView.backgroundView = nil
+            }
+        }
+        .store(in: &subscribers)
+    }
+    
+    private func performSearch(for keywords: String) {
+        apiService.fetchSymbolsPublisher(keywords: keywords).sink { (completion) in
             switch completion {
                 case .finished: break
                 case .failure(let error):
                     print(error.localizedDescription)
             }
         } receiveValue: { (searchResults) in
-            print(searchResults)
+            self.searchResults = searchResults
+            self.tableView.reloadData()
         }.store(in: &subscribers)
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return searchResults?.items.count ?? 0
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cellId", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cellId", for: indexPath) as! SearchViewCell
+        if let searchResults = self.searchResults {
+            let searchResult = searchResults.items[indexPath.row]
+            cell.setup(with: searchResult)
+        }
         return cell
     }
 }
@@ -58,6 +96,12 @@ class SearchTableViewController: UITableViewController {
 extension SearchTableViewController: UISearchResultsUpdating, UISearchControllerDelegate {
     
     func updateSearchResults(for searchController: UISearchController) {
+        guard let searchQuery = searchController.searchBar.text, !searchQuery.isEmpty else { return }
+        self.searchQuery = searchQuery
+    }
+    
+    func willPresentSearchController(_ searchController: UISearchController) {
+        mode = .search
     }
     
 }
