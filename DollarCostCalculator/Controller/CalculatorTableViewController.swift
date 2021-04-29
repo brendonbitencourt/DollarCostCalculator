@@ -39,6 +39,26 @@ class CalculatorTableViewController: UITableViewController {
         monthlyDollarCostAveragingTextField.addDoneButton()
         initialDateOfInvestimentTextField.delegate = self
     }
+    
+    private func handleSelectedDate(at index: Int) {
+        guard navigationController?.visibleViewController is DateSelectionTableViewController else { return }
+        navigationController?.popViewController(animated: true)
+        if let monthInfos = asset?.timeSeriesMonthlyAjusted.getMonthInfos() {
+            let monthInfo = monthInfos[index]
+            initialDateOfInvestimentTextField.text = monthInfo.date.MMYYFormat
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDateSelection",
+           let destination = segue.destination as? DateSelectionTableViewController,
+           let timeSeriesMonthlyAjusted = sender as? TimeSeriesMonthlyAjusted {
+            destination.timeSeriesMonthlyAjusted = timeSeriesMonthlyAjusted
+            destination.didSelectDate = { [weak self] index in
+                self?.handleSelectedDate(at: index)
+            }
+        }
+    }
 }
 
 extension CalculatorTableViewController: UITextFieldDelegate {
