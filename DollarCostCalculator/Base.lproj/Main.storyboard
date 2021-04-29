@@ -95,7 +95,7 @@
         <scene sceneID="Dj5-Go-HDv">
             <objects>
                 <tableViewController id="M1V-CR-wXK" customClass="CalculatorTableViewController" customModule="DollarCostCalculator" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="7wJ-gV-0qc">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="7wJ-gV-0qc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -287,7 +287,7 @@
                                                                         <constraint firstAttribute="height" constant="36" id="uzB-Ir-iz8"/>
                                                                     </constraints>
                                                                     <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
-                                                                    <textInputTraits key="textInputTraits"/>
+                                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                                 </textField>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="ITJ-I0-hn2">
                                                                     <rect key="frame" x="0.0" y="32" width="382" height="14"/>
@@ -320,7 +320,7 @@
                                                                         <constraint firstAttribute="height" constant="36" id="cya-z7-aMA"/>
                                                                     </constraints>
                                                                     <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
-                                                                    <textInputTraits key="textInputTraits"/>
+                                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                                 </textField>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="8zK-M6-8cL">
                                                                     <rect key="frame" x="0.0" y="32" width="382" height="14"/>
@@ -359,16 +359,10 @@
                                                                     <rect key="frame" x="0.0" y="32" width="382" height="14"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="251" text="Initial date of investiment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yke-bk-vgD">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="137.5" height="14"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="382" height="14"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="14" id="kAi-Qg-ZAV"/>
                                                                             </constraints>
-                                                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="12"/>
-                                                                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                        </label>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(USD)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Fh-Lf-MKZ">
-                                                                            <rect key="frame" x="141.5" y="0.0" width="240.5" height="14"/>
                                                                             <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="12"/>
                                                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <nil key="highlightedColor"/>
@@ -401,14 +395,16 @@
                     </tableView>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="fYk-V2-Ghn"/>
                     <connections>
+                        <outlet property="initialDateOfInvestimentTextField" destination="6rt-u5-E4Y" id="83e-za-EgH"/>
+                        <outlet property="initialInvestimentAmountTextField" destination="4v0-1y-seF" id="zoe-Im-P5S"/>
+                        <outlet property="investimentAmountCurrencyLabel" destination="T4o-Yb-t9C" id="Zqz-7M-VhI"/>
+                        <outlet property="monthlyDollarCostAveragingTextField" destination="joX-P4-m7q" id="O0q-sI-TLc"/>
                         <outlet property="nameLabel" destination="rdF-lN-gYM" id="uaq-yf-FcK"/>
                         <outlet property="symbolLabel" destination="FoF-cn-qg2" id="etX-dd-oQB"/>
                         <outletCollection property="currencyLabels" destination="ViV-AH-yi7" collectionClass="NSMutableArray" id="5Se-s2-nli"/>
-                        <outletCollection property="currencyLabels" destination="T4o-Yb-t9C" collectionClass="NSMutableArray" id="4Kp-A3-X4B"/>
                         <outletCollection property="currencyLabels" destination="8bS-1l-UtR" collectionClass="NSMutableArray" id="WuN-4e-XGX"/>
                         <outletCollection property="currencyLabels" destination="MSm-Au-1VZ" collectionClass="NSMutableArray" id="XTB-OE-15T"/>
-                        <outletCollection property="currencyLabels" destination="8Fh-Lf-MKZ" collectionClass="NSMutableArray" id="lTN-yk-cwH"/>
-                        <segue destination="9Tt-VW-ZhU" kind="show" id="BvH-1z-7WU"/>
+                        <segue destination="9Tt-VW-ZhU" kind="show" identifier="showDateSelection" id="BvH-1z-7WU"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WiP-t2-StW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

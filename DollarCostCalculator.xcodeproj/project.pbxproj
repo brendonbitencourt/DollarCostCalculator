@@ -13,6 +13,7 @@
 		DA52AEB6263B05A600C1B864 /* CalculatorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA52AEB5263B05A600C1B864 /* CalculatorTableViewController.swift */; };
 		DA52AEB8263B066400C1B864 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA52AEB7263B066400C1B864 /* Asset.swift */; };
 		DA52AEBB263B2FD400C1B864 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA52AEBA263B2FD400C1B864 /* String+Extensions.swift */; };
+		DA52AEBD263B345600C1B864 /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA52AEBC263B345600C1B864 /* UITextField+Extensions.swift */; };
 		DA7F1D6A263361D2000022B9 /* SearchViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7F1D69263361D2000022B9 /* SearchViewCell.swift */; };
 		DA7F1D73263363FF000022B9 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7F1D72263363FF000022B9 /* APIService.swift */; };
 		DA7F1D7926336568000022B9 /* SearchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7F1D7826336568000022B9 /* SearchResults.swift */; };
@@ -52,6 +53,7 @@
 		DA52AEB5263B05A600C1B864 /* CalculatorTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorTableViewController.swift; sourceTree = "<group>"; };
 		DA52AEB7263B066400C1B864 /* Asset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
 		DA52AEBA263B2FD400C1B864 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		DA52AEBC263B345600C1B864 /* UITextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
 		DA7F1D69263361D2000022B9 /* SearchViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewCell.swift; sourceTree = "<group>"; };
 		DA7F1D72263363FF000022B9 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		DA7F1D7826336568000022B9 /* SearchResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResults.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				DA52AEBA263B2FD400C1B864 /* String+Extensions.swift */,
+				DA52AEBC263B345600C1B864 /* UITextField+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA52AEBD263B345600C1B864 /* UITextField+Extensions.swift in Sources */,
 				DA7F1D6A263361D2000022B9 /* SearchViewCell.swift in Sources */,
 				DA1B6F9A2637534300B027E1 /* UIAnimatable.swift in Sources */,
 				DA7F1D73263363FF000022B9 /* APIService.swift in Sources */,

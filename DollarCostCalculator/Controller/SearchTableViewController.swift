@@ -72,8 +72,8 @@ class SearchTableViewController: UITableViewController, UIAnimatable {
         if !keywords.isEmpty {
             self.showLoadingAnimation()
             apiService.fetchSymbolsPublisher(query: keywords)
-                .sink { (completion) in
-                    self.hideLoadingAnimation()
+                .sink { [weak self] (completion) in
+                    self?.hideLoadingAnimation()
                     switch completion {
                         case .finished: break
                         case .failure(let error):
@@ -88,8 +88,10 @@ class SearchTableViewController: UITableViewController, UIAnimatable {
     }
     
     private func handleSelection(for searchResult: SearchResult) {
+        self.showLoadingAnimation()
         apiService.fetchTimeSeriesMonthlyAjustedPublisher(query: searchResult.symbol)
-            .sink { (completion) in
+            .sink { [weak self] (completion) in
+                self?.hideLoadingAnimation()
                 switch completion {
                     case .finished: break
                     case .failure(let error):
@@ -119,6 +121,7 @@ class SearchTableViewController: UITableViewController, UIAnimatable {
         if let searchResultItem = searchResults?.items[indexPath.row] {
             handleSelection(for: searchResultItem)
         }
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
