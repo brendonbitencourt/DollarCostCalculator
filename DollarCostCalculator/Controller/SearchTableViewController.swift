@@ -71,18 +71,35 @@ class SearchTableViewController: UITableViewController, UIAnimatable {
     private func performSearch(for keywords: String) {
         if !keywords.isEmpty {
             self.showLoadingAnimation()
-            apiService.fetchSymbolsPublisher(keywords: keywords).sink { (completion) in
-                self.hideLoadingAnimation()
+            apiService.fetchSymbolsPublisher(query: keywords)
+                .sink { (completion) in
+                    self.hideLoadingAnimation()
+                    switch completion {
+                        case .finished: break
+                        case .failure(let error):
+                            print(error.localizedDescription)
+                    }
+                } receiveValue: { (searchResults) in
+                    self.searchResults = searchResults
+                    self.tableView.reloadData()
+                }
+                .store(in: &subscribers)
+        }
+    }
+    
+    private func handleSelection(for searchResult: SearchResult) {
+        apiService.fetchTimeSeriesMonthlyAjustedPublisher(query: searchResult.symbol)
+            .sink { (completion) in
                 switch completion {
                     case .finished: break
                     case .failure(let error):
                         print(error.localizedDescription)
                 }
-            } receiveValue: { (searchResults) in
-                self.searchResults = searchResults
-                self.tableView.reloadData()
-            }.store(in: &subscribers)
-        }
+            } receiveValue: { [weak self] (timeSeriesMonthlyAjusted) in
+                let asset = Asset(searchResult: searchResult, timeSeriesMonthlyAjusted: timeSeriesMonthlyAjusted)
+                self?.performSegue(withIdentifier: "showCalculator", sender: asset)
+            }
+            .store(in: &subscribers)
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -99,7 +116,17 @@ class SearchTableViewController: UITableViewController, UIAnimatable {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "showCalculator", sender: nil)
+        if let searchResultItem = searchResults?.items[indexPath.row] {
+            handleSelection(for: searchResultItem)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showCalculator",
+           let destination = segue.destination as? CalculatorTableViewController,
+           let asset = sender as? Asset {
+            destination.asset = asset
+        }
     }
 }
 
