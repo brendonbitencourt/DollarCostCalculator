@@ -17,6 +17,7 @@
 		DA52AEBF263B3DCF00C1B864 /* DateSelectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA52AEBE263B3DCF00C1B864 /* DateSelectionTableViewController.swift */; };
 		DA52AEC1263B3F2100C1B864 /* DateSelectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA52AEC0263B3F2100C1B864 /* DateSelectionTableViewCell.swift */; };
 		DA52AEC3263B43DD00C1B864 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA52AEC2263B43DD00C1B864 /* Date+Extensions.swift */; };
+		DA62CCA02640820200AC6A91 /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA62CC9F2640820200AC6A91 /* Int+Extensions.swift */; };
 		DA7F1D6A263361D2000022B9 /* SearchViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7F1D69263361D2000022B9 /* SearchViewCell.swift */; };
 		DA7F1D73263363FF000022B9 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7F1D72263363FF000022B9 /* APIService.swift */; };
 		DA7F1D7926336568000022B9 /* SearchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7F1D7826336568000022B9 /* SearchResults.swift */; };
@@ -60,6 +61,7 @@
 		DA52AEBE263B3DCF00C1B864 /* DateSelectionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSelectionTableViewController.swift; sourceTree = "<group>"; };
 		DA52AEC0263B3F2100C1B864 /* DateSelectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSelectionTableViewCell.swift; sourceTree = "<group>"; };
 		DA52AEC2263B43DD00C1B864 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		DA62CC9F2640820200AC6A91 /* Int+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
 		DA7F1D69263361D2000022B9 /* SearchViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewCell.swift; sourceTree = "<group>"; };
 		DA7F1D72263363FF000022B9 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		DA7F1D7826336568000022B9 /* SearchResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResults.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				DA52AEBA263B2FD400C1B864 /* String+Extensions.swift */,
 				DA52AEBC263B345600C1B864 /* UITextField+Extensions.swift */,
 				DA52AEC2263B43DD00C1B864 /* Date+Extensions.swift */,
+				DA62CC9F2640820200AC6A91 /* Int+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -360,6 +363,7 @@
 				DA52AEBF263B3DCF00C1B864 /* DateSelectionTableViewController.swift in Sources */,
 				DA52AEBD263B345600C1B864 /* UITextField+Extensions.swift in Sources */,
 				DA7F1D6A263361D2000022B9 /* SearchViewCell.swift in Sources */,
+				DA62CCA02640820200AC6A91 /* Int+Extensions.swift in Sources */,
 				DA1B6F9A2637534300B027E1 /* UIAnimatable.swift in Sources */,
 				DA7F1D73263363FF000022B9 /* APIService.swift in Sources */,
 				DA52AEB8263B066400C1B864 /* Asset.swift in Sources */,

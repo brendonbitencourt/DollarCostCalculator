@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Combine
 
 class CalculatorTableViewController: UITableViewController {
     
@@ -15,15 +16,20 @@ class CalculatorTableViewController: UITableViewController {
     @IBOutlet weak var initialInvestimentAmountTextField: UITextField!
     @IBOutlet weak var monthlyDollarCostAveragingTextField: UITextField!
     @IBOutlet weak var initialDateOfInvestimentTextField: UITextField!
+    @IBOutlet weak var dateSlider: UISlider!
     @IBOutlet var currencyLabels: [UILabel]!
     
     var asset: Asset?
-    private var initalDateOfInvestimentIndex: Int?
+    private var subscribers = Set<AnyCancellable>()
+    
+    @Published private var initalDateOfInvestimentIndex: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
         setupTextFields()
+        setupDateSlider()
+        observeForm()
     }
     
     private func setupView() {
@@ -39,6 +45,25 @@ class CalculatorTableViewController: UITableViewController {
         initialInvestimentAmountTextField.addDoneButton()
         monthlyDollarCostAveragingTextField.addDoneButton()
         initialDateOfInvestimentTextField.delegate = self
+    }
+    
+    private func setupDateSlider() {
+        if let count = asset?.timeSeriesMonthlyAjusted.getMonthInfos().count {
+            let dateSliderCount = count - 1
+            dateSlider.maximumValue = dateSliderCount.floatValue
+        }
+    }
+    
+    private func observeForm() {
+        $initalDateOfInvestimentIndex
+            .sink { [weak self] (index) in
+                guard let index = index else { return }
+                self?.dateSlider.value = index.floatValue
+                if let dateString = self?.asset?.timeSeriesMonthlyAjusted.getMonthInfos()[index].date.MMYYFormat {
+                    self?.initialDateOfInvestimentTextField.text = dateString
+                }
+            }
+            .store(in: &subscribers)
     }
     
     private func handleSelectedDate(at index: Int) {
@@ -61,6 +86,10 @@ class CalculatorTableViewController: UITableViewController {
                 self?.handleSelectedDate(at: index)
             }
         }
+    }
+    
+    @IBAction func dateSliderDidChange(_ sender: UISlider) {
+        initalDateOfInvestimentIndex = Int(sender.value)
     }
 }
 
