@@ -151,15 +151,19 @@
                                                                 </stackView>
                                                             </subviews>
                                                         </stackView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="q4Z-Rk-bok">
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="q4Z-Rk-bok">
                                                             <rect key="frame" x="0.0" y="44" width="382" height="20"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w65-c2-vgh">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="382" height="20"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="59" height="20"/>
                                                                     <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cm5-MX-65M">
+                                                                    <rect key="frame" x="75" y="0.0" width="307" height="20"/>
+                                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                </view>
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="bWG-IL-xSb">
@@ -398,13 +402,18 @@
                     </tableView>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="fYk-V2-Ghn"/>
                     <connections>
+                        <outlet property="annualReturnLabel" destination="mdW-VU-iaT" id="OmM-JT-epg"/>
+                        <outlet property="currentValueLabel" destination="w65-c2-vgh" id="CiT-UJ-nbY"/>
                         <outlet property="dateSlider" destination="cxf-0q-VB9" id="eKY-lK-zOF"/>
+                        <outlet property="gainLabel" destination="Q8Q-TW-Dz1" id="SvD-K9-ns5"/>
                         <outlet property="initialDateOfInvestimentTextField" destination="6rt-u5-E4Y" id="83e-za-EgH"/>
                         <outlet property="initialInvestimentAmountTextField" destination="4v0-1y-seF" id="zoe-Im-P5S"/>
                         <outlet property="investimentAmountCurrencyLabel" destination="T4o-Yb-t9C" id="Zqz-7M-VhI"/>
+                        <outlet property="investimentAmountLabel" destination="fDd-eL-81v" id="B4j-GY-e1m"/>
                         <outlet property="monthlyDollarCostAveragingTextField" destination="joX-P4-m7q" id="O0q-sI-TLc"/>
                         <outlet property="nameLabel" destination="rdF-lN-gYM" id="uaq-yf-FcK"/>
                         <outlet property="symbolLabel" destination="FoF-cn-qg2" id="etX-dd-oQB"/>
+                        <outlet property="yieldLabel" destination="HgD-no-qS5" id="CFG-0h-Cab"/>
                         <outletCollection property="currencyLabels" destination="ViV-AH-yi7" collectionClass="NSMutableArray" id="5Se-s2-nli"/>
                         <outletCollection property="currencyLabels" destination="8bS-1l-UtR" collectionClass="NSMutableArray" id="WuN-4e-XGX"/>
                         <outletCollection property="currencyLabels" destination="MSm-Au-1VZ" collectionClass="NSMutableArray" id="XTB-OE-15T"/>
