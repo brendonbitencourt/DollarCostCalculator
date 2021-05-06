@@ -79,7 +79,7 @@ struct DCAService {
                                  _ investimentAmount: Double,
                                  _ initialDateOfInvestimentIndex: Int) -> Double {
         let rate = currentValue / investimentAmount
-        let years = ((initialDateOfInvestimentIndex + 1) / 12).doubleValue
+        let years = (initialDateOfInvestimentIndex.doubleValue + 1) / 12
         return pow(rate, (1 / years)) - 1
     }
     

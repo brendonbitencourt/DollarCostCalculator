@@ -100,6 +100,7 @@ class SearchTableViewController: UITableViewController, UIAnimatable {
             } receiveValue: { [weak self] (timeSeriesMonthlyAjusted) in
                 let asset = Asset(searchResult: searchResult, timeSeriesMonthlyAjusted: timeSeriesMonthlyAjusted)
                 self?.performSegue(withIdentifier: "showCalculator", sender: asset)
+                self?.searchController.searchBar.text = nil
             }
             .store(in: &subscribers)
     }
