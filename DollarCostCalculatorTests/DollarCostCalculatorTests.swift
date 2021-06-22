@@ -85,23 +85,27 @@ class DollarCostCalculatorTests: XCTestCase {
     // 2 Test Case - Assets = Winning | DCA = false => Positive Gains
     func testDCAResult_givenWinningAssetsAndDCAIsNotUsed_expectPositiveGains() throws {
         // Given
+        let assetMocked = buildMockedWinningAsset()
+        let initialInvestimentAmountFixed: Double = 5000
+        let monthlyDollarCostAveragingFixed: Double = 0
+        let initialDateOfInvestimentIndexFixed: Int = 3
         // When
+        let result = sut?.calculate(asset: assetMocked,
+                                    initialInvestimentAmount: initialInvestimentAmountFixed,
+                                    monthlyDollarCostAveraging: monthlyDollarCostAveragingFixed,
+                                    initialDateOfInvestimentIndex: initialDateOfInvestimentIndexFixed)
         // Then
-    }
-    
-    // 3 Test Case - Assets = Losing | DCA = true => Negative Gains
-    func testDCAResult_givenLosingAssetsAndDCAIsUsed_expectNegativeGains() throws {
-        // Given
-        // When
-        // Then
+        let investimentAmount = try XCTUnwrap(result?.investimentAmount)
+        XCTAssertEqual(investimentAmount, 5000)
         
-    }
-    
-    // 4  Test Case - Assets = Losing | DCA = false => Positive Gains
-    func testDCAResult_givenLosingAssetsAndDCAIsNotUsed_expectNegativeGains() throws {
-        // Given
-        // When
-        // Then
+        let currentValue = try XCTUnwrap(result?.currentValue)
+        XCTAssertEqual(currentValue, 6666.666, accuracy: 0.1)
+        
+        let gain = try XCTUnwrap(result?.gain)
+        XCTAssertEqual(gain, 1666.666, accuracy: 0.1)
+        
+        let yield = try XCTUnwrap(result?.yield)
+        XCTAssertEqual(yield, 0.3333, accuracy: 0.0001)
     }
     
     private func buildMockedWinningAsset() -> Asset {
